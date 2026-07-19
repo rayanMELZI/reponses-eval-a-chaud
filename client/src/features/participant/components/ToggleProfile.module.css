@@ -1,0 +1,22 @@
+.container {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  display: flex;
+  column-gap: 20px;
+  padding: 0 70px;
+}
+.container h3 {
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.container .active {
+  color: #f29e4f;
+}
+
+.a {
+  color: #000;
+  text-decoration: none;
+}

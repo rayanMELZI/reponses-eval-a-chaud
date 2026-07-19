@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 12.5vh);
+}
+.notificationContainer {
+  padding-left: 40px;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 4;
+  grid-row-end: 8;
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: repeat(7,1fr);
+}
+
+.container .secondNotification {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+

@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  padding-left: 78px;
+  min-height: 100vh;
+}
+.profile {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}

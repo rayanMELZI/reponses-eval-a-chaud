@@ -1,0 +1,33 @@
+.item {
+  margin-left: 20px;
+  font-size: 11px;
+}
+.item h3 {
+  font-size: 11px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #fff;
+  padding: 20px 10px;
+  min-height: 62px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  column-gap: 20px;
+
+  align-items: center;
+  position: relative;
+}
+.details::before {
+  position: absolute;
+  transform: translate(100%);
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  height: 23px;
+  border-color: var(--color, #f29e4f);
+  opacity: 0.5;
+  align-self: center;
+  border-radius: 2px;
+}

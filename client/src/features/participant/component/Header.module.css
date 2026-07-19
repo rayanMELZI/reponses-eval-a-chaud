@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 20px 70px 0 0;
+  margin-bottom: 10px;
+}
+.img {
+  display: flex;
+  gap: 22px;
+}
+.img .one {
+  cursor: pointer;
+}
+.img .one:first-child {
+  width: 13px;
+}
+.img .one:nth-child(2) {
+  width: 30px;
+}
+.container input {
+  border-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  height: 40px;
+  width: 260px;
+}
+.link {
+  color: #33333399;
+  text-decoration: none;
+  padding-right: 5px;
+}
+.path span {
+  color: #33333399;
+}
+
+.dropMenu {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #33333360;
+  position: absolute;
+  top: 57px;
+  right: 60px;
+  z-index: 1;
+}
+.dropMenu p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dropMenu ul {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.dropMenu ul li {
+  padding: 5px;
+  border-radius: 10px;
+  width: 114px;
+}
+.dropMenu ul li:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.dropMenu * {
+  text-decoration: none;
+  color: #333333;
+}

@@ -1,0 +1,14 @@
+.container{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.contenu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.text{
+    padding-left: 20px;
+}

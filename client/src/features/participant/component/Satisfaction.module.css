@@ -1,0 +1,22 @@
+.container {
+  grid-row-start: 6;
+  grid-row-end: 8;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  margin-top: 20px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.text h3{
+    font-size: 17px;
+    padding-left: 20px;
+}
+.text ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+}

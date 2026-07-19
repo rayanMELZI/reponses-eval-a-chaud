@@ -1,0 +1,20 @@
+.container {
+  padding-top: 20px;
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  display: grid;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 7px;
+  height: 200px;
+  width: 400px;
+}
+.text {
+  padding-bottom: 20px;
+  font-weight: 600;
+}

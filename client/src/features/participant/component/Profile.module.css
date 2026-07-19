@@ -1,0 +1,42 @@
+.container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  column-gap: 10px;
+}
+.title {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.info h3 {
+  align-self: center;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.infoDetails {
+  display: flex;
+  column-gap: 10px;
+}
+.infoDetails h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.infoDetails span {
+  font-size: 12px;
+  align-self: center;
+}
