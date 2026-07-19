@@ -58,6 +58,7 @@ function VerticalDotsIcon({ userID, userRoles, fetchUsers, user }) {
       };
       updateRoleDefault(userID, userRolesState[0]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userRolesState]);
 
   const handleRoleChange = async (role) => {
@@ -157,6 +158,7 @@ function Membres({ roleFilter, setRoleFilter }) {
 
   useEffect(() => {
     fetchUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = (filteredResults) => {

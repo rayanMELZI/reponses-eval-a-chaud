@@ -5,7 +5,6 @@ import Titre from "../components/Titre";
 import Footer from "../components/Footer";
 import Table from "../components/EnhancedTableHead";
 import AddFormationForm from "../components/AddFormationForm";
-import Button from "../components/Button";
 
 import PrintComponent from "../components/PrintComponent";
 import { useRef } from "react";
@@ -15,7 +14,7 @@ import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 
 import { useState, useEffect } from "react";
-import { useNavigate, useParams, NavLink, useLocation } from "react-router-dom";
+import { useParams, NavLink, useLocation } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 
@@ -64,8 +63,6 @@ function DI({ reponseID, tauxSatisfaction }) {
 }
 
 function ReponsesFormationAV() {
-  const location = useLocation();
-  let navigate = useNavigate();
   const { formationID } = useParams();
   const [reponses, setReponses] = useState([]);
   const [formation, setFormation] = useState({

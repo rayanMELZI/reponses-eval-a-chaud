@@ -1,7 +1,7 @@
 import style from "./FormModule.module.css";
 import Button from "./Button";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 import axios from "axios";
@@ -66,6 +66,7 @@ export default function FormModule({
         return { ...prev, fonction: inputs[1][0].options[0] };
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fct]);
 
   useEffect(() => {

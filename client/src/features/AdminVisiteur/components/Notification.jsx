@@ -19,7 +19,7 @@ export default function Notification({ addStyle, btnColor, statistics }) {
         {data.map((e, i) => (
           <div
             key={i}
-            className={i == 2 ? style.details : style.notLastDetails}
+            className={i === 2 ? style.details : style.notLastDetails}
           >
             <div className={style.title}>
               <h2>{e.title}</h2>

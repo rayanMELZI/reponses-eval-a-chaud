@@ -3,7 +3,6 @@ import style from "./TableRow.module.css";
 import BtnAjoute from "./BtnAjoute";
 
 import { useState } from "react";
-import CloseBtn from "./CloseBtn";
 
 function TableRow({
   nom,

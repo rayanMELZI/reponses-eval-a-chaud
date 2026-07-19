@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Authentification from "./features/Authentification";
 import HomepageP from "./features/participant/pages/HomepageP";
 import QuestEnAttente from "./features/participant/pages/QuestEnAttente";
@@ -37,7 +37,6 @@ const PrivateRoute = ({ element: Component, roles, ...rest }) => {
   const fullUsersData = JSON.parse(localStorage.getItem("fullUsersData")) || {
     roles: [],
   };
-  const location = useLocation();
 
   const hasAccess = roles.some((role) => fullUsersData.roles.includes(role));
 

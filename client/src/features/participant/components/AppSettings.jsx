@@ -4,8 +4,6 @@ import Button from "./Button";
 
 import axios from "axios";
 
-const roles = ["Participant", "Admin Formation", "Admin IT", "Admin Visiteur"];
-
 function AppSettings({ username }) {
   const userData = JSON.parse(localStorage.getItem("userData"));
   const [formData, setFormData] = useState({
@@ -42,7 +40,7 @@ function AppSettings({ username }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_API_BASE_URL}/api/user`,
         {
           username: username,

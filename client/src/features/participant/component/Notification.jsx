@@ -60,14 +60,6 @@ export default function Notification({ addStyle, color }) {
     : filterNonClot().slice(0, 3);
   const render = length > 0;
 
-  const handleClick = () => {
-    if (color === "#302CD780") {
-      navigate("/Participant/questionnaire_non_cloture");
-    } else {
-      navigate("/Participant/questionnaire_en_attente");
-    }
-  };
-
   return (
     <div className={`${style.container} ${addStyle ? addStyle : ""}`}>
       <p className={style.text}>

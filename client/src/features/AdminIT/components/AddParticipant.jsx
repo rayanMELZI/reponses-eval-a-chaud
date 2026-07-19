@@ -8,6 +8,7 @@ import { useCallback } from "react";
 function AddParticipant({ active, setActive }) {
   const handleClick = useCallback(() => {
     setActive(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div

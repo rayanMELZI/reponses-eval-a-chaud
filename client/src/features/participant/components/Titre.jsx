@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material";
 import style from "./Titre.module.css";
 import { useLocation } from "react-router-dom";
 export default function Titre({ titre, searchbar, component }) {

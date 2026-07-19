@@ -30,7 +30,7 @@ export default function GererMembres() {
             action: (
               <UserType
                 type={
-                  user.username.substring(0, 4) == "sona" ? "LDAP" : "Local"
+                  user.username.substring(0, 4) === "sona" ? "LDAP" : "Local"
                 }
               />
             ),

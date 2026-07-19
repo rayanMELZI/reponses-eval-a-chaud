@@ -4,7 +4,6 @@ import Sidebar from "../components/Sidebar";
 import Titre from "../components/Titre";
 import ToggleProfile from "../components/ToggleProfile";
 import ParametreModule from "../components/ParametreModule";
-import AppSettings from "../components/AppSettings";
 import Footer from "../components/Footer";
 
 import { useEffect, useState } from "react";
@@ -41,6 +40,7 @@ export default function Parametre() {
 
     fetchUserInfo();
     fetchLDAPdata();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // useEffect(() => {
@@ -158,19 +158,6 @@ export default function Parametre() {
 
   const handleSynchronisationSubmit = async (event) => {
     event.preventDefault();
-
-    const updatedData = {
-      ServeurLDAP: ldap.ServeurLDAP,
-      PORT: ldap.PORT,
-      baseDN: ldap.baseDN,
-      DN_cmpt: ldap.DN_cmpt,
-      Serveur_msgr: ldap.Serveur_msgr,
-      nom_Admin: ldap.nom_Admin,
-      LDAP_username: ldap.LDAP_username,
-      LDAP_password: ldap.LDAP_password,
-      periode_synch:
-        event.target["Période de synchronisation automatique (en jours)"].value,
-    };
 
     try {
       await axios.post(

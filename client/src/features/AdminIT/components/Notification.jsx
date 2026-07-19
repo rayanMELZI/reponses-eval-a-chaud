@@ -31,7 +31,7 @@ export default function Notification({ addStyle, btnColor }) {
         {list.map((e, i) => (
           <div
             key={i}
-            className={i == 2 ? style.details : style.notLastDetails}
+            className={i === 2 ? style.details : style.notLastDetails}
           >
             <div>
               <p className={style.title}>{e.nom}</p>

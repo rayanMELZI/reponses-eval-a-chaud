@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import style from "./QuestDetails.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -76,6 +76,7 @@ export default function QuestDetails({
       .catch((error) => {
         console.error("Error fetching formation data:", error);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isCloture, userID]);
 
   const filterFormations = () => {

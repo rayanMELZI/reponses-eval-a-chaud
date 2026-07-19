@@ -23,7 +23,7 @@ export default function EditProfile({ username }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_API_BASE_URL}/api/user`,
         {
           username: username,

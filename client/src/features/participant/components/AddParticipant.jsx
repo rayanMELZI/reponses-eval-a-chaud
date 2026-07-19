@@ -14,7 +14,6 @@ function AddParticipant({
   setMembresConcernes,
 }) {
   const [users, setUsers] = useState([]);
-  const [structures, setStructures] = useState({});
 
   useEffect(() => {
     const fetchUsersAndStructures = async () => {
@@ -47,6 +46,7 @@ function AddParticipant({
 
   const handleClick = useCallback(() => {
     setActive(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

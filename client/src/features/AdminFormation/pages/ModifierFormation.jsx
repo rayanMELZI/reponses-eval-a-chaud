@@ -108,13 +108,13 @@ Merci pour votre collaboration.`;
 
     try {
       // Update the formation
-      const response = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_API_BASE_URL}/api/formation/${formationID}`,
         formation
       );
 
       // Update participants
-      const responsePrt = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_API_BASE_URL}/api/participations/${formationID}`,
         { participations }
       );
@@ -173,6 +173,7 @@ Merci pour votre collaboration.`;
       })
     );
     console.log("participations :", participations);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [membresConcernes]);
 
   const handleRemoveParticipant = (id) => {

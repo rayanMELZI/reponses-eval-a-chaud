@@ -9,6 +9,7 @@ export default function QuestUserInfo({ repID }) {
 
   useEffect(() => {
     if (reponseID === undefined) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       reponseID = repID;
     }
   }, []);

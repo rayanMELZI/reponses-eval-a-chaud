@@ -224,6 +224,7 @@ const EnhancedTable = ({ rows = [] }) => {
       };
     });
     setSelectedItems(items);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
   const handleRequestSort = (event, property) => {

@@ -13,7 +13,7 @@ import { useState } from "react";
 import React from "react";
 
 export default function QuestNonClot() {
-  const [active, setActive] = useState(false);
+  const [, setActive] = useState(false);
   return (
     <div className={style.container}>
       <Sidebar />

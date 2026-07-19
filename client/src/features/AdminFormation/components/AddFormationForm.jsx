@@ -2,8 +2,6 @@ import React from "react";
 import style from "./AddFormationForm.module.css";
 import TextInput from "../components/TextInput.jsx";
 
-import axios from "axios";
-
 function AddFormationForm({ formation, setFormation, isDisabled }) {
   const handleChange = (e) => {
     const { name, value } = e.target;

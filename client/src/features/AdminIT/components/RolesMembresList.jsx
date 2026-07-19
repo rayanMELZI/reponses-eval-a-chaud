@@ -1,5 +1,4 @@
 import style from "./RolesMembresList.module.css";
-import TableRow from "./TableRow";
 import React from "react";
 
 export default function RolesMembresList({ columns, propData }) {

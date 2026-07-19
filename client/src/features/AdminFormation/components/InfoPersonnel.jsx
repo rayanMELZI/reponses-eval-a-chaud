@@ -46,6 +46,7 @@ export default function InfoPersonnel({ username, structure, setStructure }) {
     if (structure.structureID) {
       fetchStructureName();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [structure.structureID, structure.nom_structure]);
 
   const handleStructureChange = (e) => {
@@ -74,7 +75,7 @@ export default function InfoPersonnel({ username, structure, setStructure }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_API_BASE_URL}/api/user`,
         {
           username,

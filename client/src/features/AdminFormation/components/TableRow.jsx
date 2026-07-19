@@ -1,6 +1,5 @@
 import style from "./TableRow.module.css";
 import BtnAjoute from "./BtnAjoute";
-import CloseBtn from "../components/CloseBtn";
 
 import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
@@ -48,6 +47,7 @@ function TableRow({
     //     );
     //   }
     // }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ajoute]);
 
   useEffect(() => {
@@ -56,6 +56,7 @@ function TableRow({
         setAjoute(true);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [membresConcernes]);
 
   useEffect(() => {
@@ -64,6 +65,7 @@ function TableRow({
         setAjoute(true);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [concerneParNotifications]);
 
   return (
