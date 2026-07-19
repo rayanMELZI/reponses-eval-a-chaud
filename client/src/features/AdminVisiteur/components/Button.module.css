@@ -1,0 +1,23 @@
+.btn {
+  background-color: #f29e4f;
+  border: none;
+  color: #fff;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.minimal {
+  border: none;
+  text-decoration: underline;
+  color: #33333380;
+  font-weight: 600;
+}
+.white {
+  background-color: #fff;
+  border: solid 1.5px #f29e4f;
+  color: #f29e4f;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}

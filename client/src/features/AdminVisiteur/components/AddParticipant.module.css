@@ -1,0 +1,23 @@
+.blurredBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  backdrop-filter: blur(2px);
+}
+
+.container {
+  background-color: #fff;
+  border: solid #f29e4f 2px;
+  border-radius: 8px;
+  width: 70vw;
+  height: 90vh;
+  /* overflow-y: hidden; */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
