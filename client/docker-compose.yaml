@@ -1,0 +1,57 @@
+services:
+  database:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: form-eval
+      MYSQL_PASSWORD: change_me_dev_password
+      MYSQL_ROOT_PASSWORD: change_me_dev_password
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - "3307:3306"
+    expose:
+      # Opens port 3306 on the container
+      - "3306"
+    volumes:
+      # Where our data will be persisted
+      - my-database:/var/lib/mysql
+      # - ./form-eval.sql:/var/lib/mysql
+      # - ./form-eval.sql:/docker-entrypoint-initdb.d/form-eval.sql
+
+  front-end:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:4173"
+    depends_on:
+      - database
+      - back-end
+
+  back-end:
+    build:
+      context: ../server/
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    depends_on:
+      - database
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8090:80"
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: change_me_dev_password
+
+# Names our volume
+volumes:
+  my-database:
