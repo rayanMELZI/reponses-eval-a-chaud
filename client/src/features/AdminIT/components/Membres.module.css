@@ -1,0 +1,45 @@
+.container {
+  background-color: #fff;
+  border: solid #f29e4f 1.5px;
+  border-radius: 8px;
+  padding: 20px 20px 0 20px;
+  width: 600px;
+  max-width: 600px;
+  height: 340px;
+}
+
+.form {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #33333360;
+  position: absolute;
+  top: 18px;
+  right: 5px;
+  z-index: 1;
+
+  line-height: 1.8;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.input[type="checkbox"] {
+  display: none;
+}
+
+.input[type="checkbox"]:checked + .label {
+  background-color: rgba(242, 158, 79, 0.25);
+  color: rgba(242, 158, 79);
+}

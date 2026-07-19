@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 9;
+  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 20px 20px 0 0;
+  margin-bottom: 10px;
+}
+.img {
+  display: flex;
+  gap: 15px;
+}
+.img .one {
+  cursor: pointer;
+}
+.container input {
+  border-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+.link{
+  color: #33333399;
+  text-decoration: none;
+  padding-right: 5px;
+}
+.path span{
+  color: #33333399;
+
+}

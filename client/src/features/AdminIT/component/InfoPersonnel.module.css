@@ -1,0 +1,34 @@
+.container {
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 2;
+  grid-column-end: 8;
+}
+.title {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  row-gap: 5px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.col input {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #65646a;
+  border-radius: 10px;
+}

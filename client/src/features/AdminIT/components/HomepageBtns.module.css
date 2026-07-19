@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-areas: "a b" "c d";
+  margin-top: 35px;
+  row-gap: 10px;
+  height: 200px;
+  width: 350px;
+}
+
+.btnContainer {
+  height: 110px;
+  width: 150px;
+  border-radius: 15px;
+  background-image: url("/Welcome.svg");
+  background-position: center;
+  background-size: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: #f29e4f;
+}
+.btn {
+  height: 105px;
+  width: 145px;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+}
+.btn img {
+  height: 50px;
+  width: 50px;
+}

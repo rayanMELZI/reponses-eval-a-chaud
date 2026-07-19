@@ -1,0 +1,29 @@
+.container {
+  margin-top: 25px;
+}
+.rolesContainer {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 15px;
+}
+.rolesContainer ul {
+  list-style-type: none;
+}
+.rolesContainer li {
+  padding: 13px 30px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.rolesContainer li::before {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  content: "";
+  border-width: 4px;
+  border-style: solid;
+  height: 13px;
+  border-color: var(--color, #f29e4f80);
+  align-self: center;
+  border-radius: 2px;
+}
