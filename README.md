@@ -1,4 +1,4 @@
-# FormEval — Réponses aux questionnaires d'évaluation à chaud
+# RQEC — Réponses aux questionnaires d'évaluation à chaud
 
 Plateforme web de gestion des questionnaires d'évaluation "à chaud" des formations :
 les participants répondent à un questionnaire de satisfaction à l'issue de chaque
