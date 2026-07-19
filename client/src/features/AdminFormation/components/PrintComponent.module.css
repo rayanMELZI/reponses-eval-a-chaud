@@ -1,0 +1,58 @@
+.printContainer {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.printHeader,
+.printFooter {
+  text-align: center;
+}
+
+.printHeader {
+  padding: 5px 0px 5px 50px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px !important;
+  border-bottom: solid 1px !important;
+}
+.printTitle {
+  width: 180px;
+  text-align: left;
+  line-height: 23px;
+}
+
+.printFooter {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #f29e4f;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.printContent {
+  margin: 30px 60px;
+}
+
+/* Print styles */
+@media print {
+  @page {
+    margin: 20px;
+  }
+  .printContainer {
+    page-break-after: always;
+  }
+}
+
+.printComponent {
+  border: none;
+}
+.printComponent * {
+  border: none;
+}

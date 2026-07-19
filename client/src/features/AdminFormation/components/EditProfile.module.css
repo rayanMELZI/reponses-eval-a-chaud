@@ -1,0 +1,38 @@
+.container {
+  width: 50%;
+  height: 100%;
+  padding: 0 70px;
+  font-size: 13px;
+}
+.title {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  row-gap: 5px;
+  padding: 10px 15px 15px 15px;
+}
+.input[type="password"] {
+  margin-bottom: 25px;
+}
+.input {
+  width: 90%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #65646a;
+}
+.input:focus {
+  border: none;
+  outline: 1.5px solid #f29e4f;
+  background-color: #fff;
+}
+label {
+  font-weight: 600;
+}

@@ -1,0 +1,34 @@
+.sidebar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0px;
+  height: 100vh;
+  background-color: #fff;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.logo {
+  width: 40px;
+  cursor: pointer;
+}
+
+.utils {
+  width: 20px;
+  cursor: pointer;
+}
+.out img {
+  cursor: pointer;
+}
+.active {
+  filter: grayscale(100%);
+}

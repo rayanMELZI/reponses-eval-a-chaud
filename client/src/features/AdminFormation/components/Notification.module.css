@@ -1,0 +1,81 @@
+.container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-top: 20px;
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  display: grid;
+  padding-bottom: 5px;
+  position: relative;
+
+  height: 200px;
+  width: 400px;
+}
+.text {
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+.text span {
+  color: red;
+}
+
+.title {
+  font-size: 10px;
+  padding-left: 20px;
+}
+.title h2 {
+  font-size: 12px;
+}
+.title h4 {
+  font-weight: 500;
+}
+.details,
+.notLastDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.notLastDetails {
+  border-bottom: 1px solid #d6dbde;
+}
+.details::before,
+.notLastDetails::before {
+  content: "";
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 2px;
+  height: 20px;
+  border-color: #f29e4f80;
+  position: absolute;
+}
+.date {
+  white-space: nowrap;
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.btnFather {
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  width: auto;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+.btn {
+  padding: 5px 10px 5px 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #f29e4f;
+  color: #f29e4f;
+}
+.btn:hover{
+  background-color: #f29e4f40;
+}
