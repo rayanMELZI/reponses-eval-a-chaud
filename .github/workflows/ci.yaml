@@ -86,7 +86,7 @@ jobs:
       matrix:
         include:
           - name: rqec-backend
-            context: backend
+            context: server
           - name: rqec-frontend
             context: client
     steps:
