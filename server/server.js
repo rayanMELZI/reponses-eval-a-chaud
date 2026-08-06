@@ -19,7 +19,7 @@ const db = mysql.createConnection({
   // host: "database",
   host: process.env.DB_HOST || "localhost",
   user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "sonapass",
+  password: process.env.DB_PASSWORD || "nanopass",
   database: process.env.DB_NAME || "form-eval",
   port: 3306,
 });
