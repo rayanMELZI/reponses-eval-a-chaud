@@ -15,6 +15,8 @@ services:
     volumes:
       # Where our data will be persisted
       - my-database:/var/lib/mysql
+      # - ramy_ro7_tkhra:/etc/hosts
+      
       # - ./form-eval.sql:/var/lib/mysql
       # - ./form-eval.sql:/docker-entrypoint-initdb.d/form-eval.sql
 
@@ -55,3 +57,4 @@ services:
 # Names our volume
 volumes:
   my-database:
+  # ramy_ro7_tkhra: 
