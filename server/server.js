@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql12");
+const mysql = require("mysql2");
 const cors = require("cors");
 const ldap = require("ldapjs");
 const { sendEmail } = require("./emailService");
