@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const mysql = require("mysql");
+const mysql = require("mysql12");
 
 // Database connection
 const db = mysql.createConnection({
