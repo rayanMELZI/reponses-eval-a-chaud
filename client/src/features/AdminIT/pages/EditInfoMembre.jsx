@@ -21,7 +21,7 @@ export default function InfoMembre() {
     const fetchUserDetails = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/${userName}`
+          `/api/user/${userName}`
         );
         setUserDetails(response.data);
       } catch (error) {
@@ -42,7 +42,7 @@ export default function InfoMembre() {
     const fetchStructures = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure`
+          `/api/structure`
         );
         const structureArray = Array.from(
           new Set(response.data.map((structure) => structure.nom_structure))

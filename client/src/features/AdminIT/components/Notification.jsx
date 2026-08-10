@@ -11,7 +11,7 @@ export default function Notification({ addStyle, btnColor }) {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/allUsers-structure`
+          `/allUsers-structure`
         );
         // console.log(response.data);
         setData(response.data);

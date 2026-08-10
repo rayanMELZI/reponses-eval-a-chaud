@@ -22,10 +22,10 @@ function AddParticipant({
     const fetchUsersAndStructures = async () => {
       try {
         const userResponse = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/allUsers`
+          `/allUsers`
         );
         const structureResponse = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure`
+          `/api/structure`
         );
 
         const structureMap = structureResponse.data.reduce((map, structure) => {

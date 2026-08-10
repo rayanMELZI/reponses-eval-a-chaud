@@ -7,7 +7,7 @@ export default function Footer({ change }) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_BASE_URL}/api/admin-email`)
+      .get(`/api/admin-email`)
       .then((response) => {
         setAdminEmail(response.data.email);
       })

@@ -11,7 +11,7 @@ export default function Profile() {
     const fetchStructureName = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure/${userData.structureID}`
+          `/api/structure/${userData.structureID}`
         );
         setStruct(response.data.nom_structure);
         // console.log(userData.structureID);

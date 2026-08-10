@@ -16,7 +16,7 @@ export default function Header() {
     const fetchRoles = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/${
+          `/api/user/${
             JSON.parse(localStorage.getItem("userData")).utilisateurID
           }/roles`
         );

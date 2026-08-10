@@ -68,7 +68,7 @@ export default function ModifierFormation() {
     const fetchFormationInfo = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/formations/${formationID}`
+          `/api/formations/${formationID}`
         );
         const formatedData = response.data[0];
         setFormation((prev) => {
@@ -109,20 +109,20 @@ Merci pour votre collaboration.`;
     try {
       // Update the formation
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/formation/${formationID}`,
+        `/api/formation/${formationID}`,
         formation
       );
 
       // Update participants
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/participations/${formationID}`,
+        `/api/participations/${formationID}`,
         { participations }
       );
       // console.log("Participations updated successfully:", responsePrt.data);
       // await Promise.all(
       //   concerneParNotifications.map(async (participant) => {
       //     const to = participant.email;
-      //     await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/send-notification`, {
+      //     await axios.post(`/api/send-notification`, {
       //       to,
       //       subject,
       //       message,
@@ -146,7 +146,7 @@ Merci pour votre collaboration.`;
         concerneParNotifications.map(async (participant) => {
           const to = participant.email;
           await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/api/send-notification`,
+            `/api/send-notification`,
             {
               to,
               subject,
@@ -204,7 +204,7 @@ Merci pour votre collaboration.`;
     const fetchParticipations = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/formations/${formationID}/participations`
+          `/api/formations/${formationID}/participations`
         );
         const formatedData = response.data.map((participant) => ({
           userID: participant.utilisateurID,

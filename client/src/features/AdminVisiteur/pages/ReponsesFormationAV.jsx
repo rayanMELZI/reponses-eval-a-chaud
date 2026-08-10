@@ -91,7 +91,7 @@ function ReponsesFormationAV() {
     const fetchFormationInfo = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/formations/${formationID}`
+          `/api/formations/${formationID}`
         );
         const formatedData = response.data[0];
         setFormation((prev) => {
@@ -123,7 +123,7 @@ function ReponsesFormationAV() {
     const fetchResponses = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/reponses/${formationID}`
+          `/api/reponses/${formationID}`
         );
         const formatedData = response.data.map((rep) => {
           return {

@@ -26,7 +26,7 @@ export default function AjouterMembre() {
     const fetchStructures = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure`
+          `/api/structure`
         );
         const structureArray = Array.from(
           new Set(response.data.map((structure) => structure.nom_structure))

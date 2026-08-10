@@ -15,7 +15,7 @@ function AppSettings({ username }) {
     const fetchRoles = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/${
+          `/api/user/${
             JSON.parse(localStorage.getItem("userData")).utilisateurID
           }/roles`
         );
@@ -41,7 +41,7 @@ function AppSettings({ username }) {
     e.preventDefault();
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/user`,
+        `/api/user`,
         {
           username: username,
           fieldsToUpdate: formData,

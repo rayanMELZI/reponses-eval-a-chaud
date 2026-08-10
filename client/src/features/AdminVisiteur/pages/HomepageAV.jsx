@@ -17,7 +17,7 @@ export default function HomepageAV() {
     const fetchStats = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/adminFormationStatistics`
+          `/api/adminFormationStatistics`
         );
         setStatistics(response.data);
       } catch (error) {

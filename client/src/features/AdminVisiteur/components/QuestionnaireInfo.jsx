@@ -16,7 +16,7 @@ export default function QuestionnaireInfo() {
   const [formation, setFormation] = useState(null);
   const { formationID } = useParams();
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/formation/${formationID}`)
+    fetch(`/api/formation/${formationID}`)
       .then((response) => response.json())
       .then((data) => setFormation(data))
       .catch((error) => console.error("Error fetching formation data:", error));

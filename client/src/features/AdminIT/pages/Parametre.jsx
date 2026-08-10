@@ -18,7 +18,7 @@ export default function Parametre() {
     const fetchUserInfo = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/${userData.username}`
+          `/api/user/${userData.username}`
         );
         setUser(response.data);
       } catch (error) {
@@ -29,7 +29,7 @@ export default function Parametre() {
     const fetchLDAPdata = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/parametres`
+          `/api/parametres`
         );
         // console.log(response.data);
         setLdap(response.data);
@@ -61,7 +61,7 @@ export default function Parametre() {
 
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/user/${user.username}`,
+        `/api/user/${user.username}`,
         updatedData,
         {
           headers: {
@@ -94,7 +94,7 @@ export default function Parametre() {
 
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/parametres`,
+        `/api/parametres`,
         updatedData,
         {
           headers: {
@@ -121,7 +121,7 @@ export default function Parametre() {
 
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/parametres`,
+        `/api/parametres`,
         updatedData,
         {
           headers: {
@@ -146,7 +146,7 @@ export default function Parametre() {
 
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/send-notification`,
+        `/api/send-notification`,
         body
       );
       alert("Email envoyé avec succès !");
@@ -161,7 +161,7 @@ export default function Parametre() {
 
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/update-sync-interval`,
+        `/api/update-sync-interval`,
         JSON.stringify({
           syncIntervalDays: parseInt(
             event.target["Période de synchronisation automatique (en jours)"]
@@ -187,7 +187,7 @@ export default function Parametre() {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/sync-ldap`
+        `/api/sync-ldap`
       );
       alert(response.data.message);
     } catch (error) {

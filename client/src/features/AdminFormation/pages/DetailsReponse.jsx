@@ -29,7 +29,7 @@ export default function DetailsReponse() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/reponses/${formationID}/${reponseID}`
+          `/api/reponses/${formationID}/${reponseID}`
         );
         // console.log(response.data, response.data[0].taux_satisfaction);
         setTauxSatis(response.data[0].taux_satisfaction);

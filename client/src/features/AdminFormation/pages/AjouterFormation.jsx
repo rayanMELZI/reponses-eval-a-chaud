@@ -59,7 +59,7 @@ Merci pour votre collaboration.`;
     try {
       // Create the formation
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/formation`,
+        `/api/formation`,
         formation
       );
       const formationID = response.data.formationID;
@@ -68,7 +68,7 @@ Merci pour votre collaboration.`;
       await Promise.all(
         membresConcernes.map(async (participant) => {
           await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/api/participation`,
+            `/api/participation`,
             {
               formationID,
               utilisateurID: participant.userID,
@@ -77,7 +77,7 @@ Merci pour votre collaboration.`;
 
           const to = participant.email;
           await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/api/send-notification`,
+            `/api/send-notification`,
             {
               to,
               subject,

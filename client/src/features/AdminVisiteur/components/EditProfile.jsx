@@ -24,7 +24,7 @@ export default function EditProfile({ username }) {
     e.preventDefault();
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/user`,
+        `/api/user`,
         {
           username: username,
           fieldsToUpdate: formData,

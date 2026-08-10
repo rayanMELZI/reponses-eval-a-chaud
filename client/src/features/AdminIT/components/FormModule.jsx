@@ -45,7 +45,7 @@ export default function FormModule({
     const fetchStructures = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure`
+          `/api/structure`
         );
         setStructures(response.data);
       } catch (error) {
@@ -109,7 +109,7 @@ export default function FormModule({
       )
     ) {
       try {
-        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/newUser`, {
+        await axios.post(`/api/newUser`, {
           formData,
           usersRoles,
         });
@@ -123,7 +123,7 @@ export default function FormModule({
     } else {
       try {
         await axios.put(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/${userName}`,
+          `/api/user/${userName}`,
           formData
         );
         alert("Utilisateur modifié avec succès");

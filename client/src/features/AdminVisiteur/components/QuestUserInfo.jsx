@@ -18,7 +18,7 @@ export default function QuestUserInfo({ repID }) {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/reponses/${formationID}/${reponseID}`
+          `/api/reponses/${formationID}/${reponseID}`
         );
         // console.log(response.data);
         setUserInfo(response.data[0]);

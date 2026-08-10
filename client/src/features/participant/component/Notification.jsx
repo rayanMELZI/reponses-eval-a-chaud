@@ -22,8 +22,8 @@ export default function Notification({ addStyle, color }) {
 
   useEffect(() => {
     const endpoint = isCloture
-      ? `${process.env.REACT_APP_API_BASE_URL}/AdminFormation/formations_cloture/${userID}`
-      : `${process.env.REACT_APP_API_BASE_URL}/AdminFormation/formations_non_cloture/${userID}`;
+      ? `/AdminFormation/formations_cloture/${userID}`
+      : `/AdminFormation/formations_non_cloture/${userID}`;
     axios
       .get(endpoint)
       .then((response) => {
@@ -31,7 +31,7 @@ export default function Notification({ addStyle, color }) {
         const formationPromises = formations.map((formation) =>
           axios
             .get(
-              `${process.env.REACT_APP_API_BASE_URL}/api/hasResponded/${formation.formationID}/${userID}`
+              `/api/hasResponded/${formation.formationID}/${userID}`
             )
             .then((response) => ({
               ...formation,

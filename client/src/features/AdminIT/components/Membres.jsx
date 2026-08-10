@@ -42,7 +42,7 @@ function VerticalDotsIcon({ userID, userRoles, fetchUsers, user }) {
       const updateRoleDefault = async (userID, role_default) => {
         try {
           await axios.put(
-            `${process.env.REACT_APP_API_BASE_URL}/api/utilisateur/${userID}/role_default`,
+            `/api/utilisateur/${userID}/role_default`,
             { role_default },
             {
               headers: {
@@ -67,7 +67,7 @@ function VerticalDotsIcon({ userID, userRoles, fetchUsers, user }) {
     try {
       if (hasRole) {
         await axios.delete(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/removeRole`,
+          `/api/user/removeRole`,
           {
             data: { userID, role },
           }
@@ -75,7 +75,7 @@ function VerticalDotsIcon({ userID, userRoles, fetchUsers, user }) {
         setUserRolesState((prevRoles) => prevRoles.filter((r) => r !== role));
       } else {
         await axios.post(
-          `${process.env.REACT_APP_API_BASE_URL}/api/user/addRole`,
+          `/api/user/addRole`,
           {
             userID,
             role,
@@ -134,7 +134,7 @@ function Membres({ roleFilter, setRoleFilter }) {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/users/details`
+        `/api/users/details`
       );
       const formatedAllUsers = response.data.map((user) => ({
         nom: user.nom,

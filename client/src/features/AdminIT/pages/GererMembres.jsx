@@ -19,7 +19,7 @@ export default function GererMembres() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/allUsers-structure`
+          `/allUsers-structure`
         );
         const formatedAllUsers = response.data.map((user) => {
           return {

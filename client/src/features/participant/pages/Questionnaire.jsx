@@ -25,7 +25,7 @@ export default function Questionnaire() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_BASE_URL}/api/formation/${formationID}`)
+      .get(`/api/formation/${formationID}`)
       .then((response) => {
         const formation = response.data;
         const now = formatDate(new Date());

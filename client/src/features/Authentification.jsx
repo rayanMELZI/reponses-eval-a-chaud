@@ -24,7 +24,7 @@ function Authentification() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/`,
+        `/`,
         values
       );
       const role = response.data.user.role_default;
@@ -32,7 +32,7 @@ function Authentification() {
 
       // Fetch user with its structure
       const userResponse = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/users/details/${response.data.user.username}`
+        `/api/users/details/${response.data.user.username}`
       );
 
       // Store the full user data with structure in local storage
@@ -43,7 +43,7 @@ function Authentification() {
 
       // Fetch all users with their structures
       const usersResponse = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/users/details`
+        `/api/users/details`
       );
 
       // Store the full user data with structures in local storage

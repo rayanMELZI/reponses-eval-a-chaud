@@ -18,7 +18,7 @@ export default function InfoPersonnel({ username, structure, setStructure }) {
     const fetchStructures = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure`
+          `/api/structure`
         );
         setAllStructures(response.data);
       } catch (error) {
@@ -33,7 +33,7 @@ export default function InfoPersonnel({ username, structure, setStructure }) {
     const fetchStructureName = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_BASE_URL}/api/structure/${structure.structureID}`
+          `/api/structure/${structure.structureID}`
         );
         setStructure((prevStructure) => ({
           ...prevStructure,
@@ -76,7 +76,7 @@ export default function InfoPersonnel({ username, structure, setStructure }) {
     e.preventDefault();
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_BASE_URL}/api/user`,
+        `/api/user`,
         {
           username,
           fieldsToUpdate: formData,

@@ -103,7 +103,7 @@ export default function TableDevaluation({ isCloture, repID }) {
     try {
       const satisfactionRate = calculateSatisfactionRate();
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/api/Responses`,
+        `/api/Responses`,
         {
           method: "POST",
           headers: {
@@ -162,7 +162,7 @@ export default function TableDevaluation({ isCloture, repID }) {
   const fetchSavedData = async (reponseID) => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/userReponses/${reponseID}`
+        `/api/userReponses/${reponseID}`
       );
       // console.log(response.data);
 

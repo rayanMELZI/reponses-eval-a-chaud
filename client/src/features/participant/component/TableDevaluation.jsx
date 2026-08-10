@@ -96,7 +96,7 @@ export default function TableDevaluation({ isCloture }) {
     try {
       const satisfactionRate = calculateSatisfactionRate();
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/api/Responses`,
+        `/api/Responses`,
         {
           method: "POST",
           headers: {
@@ -156,7 +156,7 @@ export default function TableDevaluation({ isCloture }) {
   const fetchSavedData = async (formationID, userID) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/api/evaluation/${formationID}/${userID}`
+        `/api/evaluation/${formationID}/${userID}`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
