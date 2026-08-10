@@ -176,11 +176,11 @@ const extractAttributes = (attributes) => {
   return attributeMap;
 };
 
-app.get("/", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/", (req, res) => {
+app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
 
   if (username.startsWith("sona")) {
@@ -278,7 +278,7 @@ app.post("/", (req, res) => {
   }
 });
 
-app.get("/AdminFormation/formations_non_cloture/:userID?", (req, res) => {
+app.get("/api/AdminFormation/formations_non_cloture/:userID?", (req, res) => {
   const { userID } = req.params;
 
   let query;
@@ -306,7 +306,7 @@ app.get("/AdminFormation/formations_non_cloture/:userID?", (req, res) => {
   });
 });
 
-app.get("/AdminFormation/formations_cloture/:userID?", (req, res) => {
+app.get("/api/AdminFormation/formations_cloture/:userID?", (req, res) => {
   const { userID } = req.params;
 
   let query;
@@ -391,7 +391,7 @@ app.get("/api/structure/:id?", (req, res) => {
   }
 });
 
-app.get("/allUsers", (req, res) => {
+app.get("/api/allUsers", (req, res) => {
   db.query("SELECT * FROM utilisateur", (error, results) => {
     if (error) {
       console.error("Database query error:", error);
@@ -572,7 +572,7 @@ app.post("/api/newUser", (req, res) => {
   });
 });
 
-app.get("/allUsers-structure", (req, res) => {
+app.get("/api/allUsers-structure", (req, res) => {
   const query = `
     SELECT utilisateur.*, structure.nom_structure
     FROM utilisateur
