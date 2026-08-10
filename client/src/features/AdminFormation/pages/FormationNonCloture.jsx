@@ -18,7 +18,7 @@ export default function FormationNonCloture() {
     const fetchFormations = async () => {
       try {
         const response = await axios.get(
-          `/AdminFormation/formations_non_cloture`
+          `/api/AdminFormation/formations_non_cloture`
         );
         // Format dates before setting the state
         const formattedFormations = response.data.map((formation) => ({

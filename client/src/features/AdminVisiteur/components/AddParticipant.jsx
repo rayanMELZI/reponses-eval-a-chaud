@@ -20,7 +20,7 @@ function AddParticipant({
     const fetchUsersAndStructures = async () => {
       try {
         const userResponse = await axios.get(
-          `/allUsers`
+          `/api/allUsers`
         );
         const structureResponse = await axios.get(
           `/api/structure`

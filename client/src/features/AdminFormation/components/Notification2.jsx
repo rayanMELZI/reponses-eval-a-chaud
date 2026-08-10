@@ -21,7 +21,7 @@ export default function Notification({ color }) {
 
   useEffect(() => {
     const endpoint =
-      `/AdminFormation/formations_non_cloture`;
+      `/api/AdminFormation/formations_non_cloture`;
     axios
       .get(endpoint)
       .then((response) => {

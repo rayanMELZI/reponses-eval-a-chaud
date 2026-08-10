@@ -51,8 +51,8 @@ export default function QuestDetails({
 
   useEffect(() => {
     const endpoint = isCloture
-      ? `/AdminFormation/formations_cloture/${userID}`
-      : `/AdminFormation/formations_non_cloture/${userID}`;
+      ? `/api/AdminFormation/formations_cloture/${userID}`
+      : `/api/AdminFormation/formations_non_cloture/${userID}`;
     axios
       .get(endpoint)
       .then((response) => {

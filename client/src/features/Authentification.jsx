@@ -24,7 +24,7 @@ function Authentification() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `/`,
+        `/api/login`,
         values
       );
       const role = response.data.user.role_default;
